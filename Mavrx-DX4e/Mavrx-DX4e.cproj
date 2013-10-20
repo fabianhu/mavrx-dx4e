@@ -5,7 +5,7 @@
     <ProjectVersion>6.1</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
     <ProjectGuid>{af6bb66c-f044-43f1-a773-8d3166934ba5}</ProjectGuid>
-    <avrdevice>ATmega88P</avrdevice>
+    <avrdevice>ATA6613C</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
     <Language>C</Language>
@@ -19,7 +19,7 @@
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
     <OverrideVtorValue>exception_table</OverrideVtorValue>
-    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <eraseonlaunchrule>1</eraseonlaunchrule>
     <ProgFlashFromRam>true</ProgFlashFromRam>
     <RamSnippetAddress>0x20000000</RamSnippetAddress>
     <CacheFlash>true</CacheFlash>
@@ -37,6 +37,21 @@
         </dependencies>
       </framework-data>
     </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.jtagicemkii</avrtool>
+    <com_atmel_avrdbg_tool_jtagicemkii>
+      <ToolOptions>
+        <InterfaceProperties>
+          <JtagEnableExtResetOnStartSession>false</JtagEnableExtResetOnStartSession>
+          <IspClock>604810</IspClock>
+          <DebugWireClockDiv>2000</DebugWireClockDiv>
+        </InterfaceProperties>
+        <InterfaceName>debugWIRE</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.jtagicemkii</ToolType>
+      <ToolNumber>00A000000174</ToolNumber>
+      <ToolName>JTAGICE mkII</ToolName>
+    </com_atmel_avrdbg_tool_jtagicemkii>
+    <avrtoolinterface>debugWIRE</avrtoolinterface>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -93,7 +108,31 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Mavrx-DX4e.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="music.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="music.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="spektrum-tx.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="spektrum-tx.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="StickInput.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="StickInput.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

@@ -51,7 +51,7 @@ void sticksProcessRaw(uint16_t* _pChannels)
 {
 	for(uint8_t i=0;i<4;i++)
 	{
-		_pChannels[i] /= OVERSAMPLE;
+		_pChannels[i] /= (OVERSAMPLE-1);
 	}
 
 	for(uint8_t i=0;i<4;i++)

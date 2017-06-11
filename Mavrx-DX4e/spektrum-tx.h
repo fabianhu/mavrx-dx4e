@@ -11,7 +11,7 @@
 
 #define SPEKTRUM_med 512
 #define SPEKTRUM_min 162
-#define SPEKTRUM_max 862
+#define SPEKTRUM_max 862 //162..862
 
 
 void spektrumInit(void);

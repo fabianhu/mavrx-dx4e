@@ -196,16 +196,18 @@ int main(void) {
 			secondScaler=0;
 			IdleSeconds++;
 			if(auxSwitch)
+			{	
 				FlySeconds++;
 					
-			if(FlySeconds == FLYSECONDS_MAX)
-				oneTone(NOTE7B);
-			if(FlySeconds == FLYSECONDS_MAX+10)
-				twoTone(NOTE7C);
+				if(FlySeconds == FLYSECONDS_MAX)
+					oneTone(NOTE7B);
+				if(FlySeconds == FLYSECONDS_MAX+10)
+					twoTone(NOTE7C);
 			
-			if(IdleSeconds >= FLYSECONDS_MAX*2)
-			{
-				twoTone(NOTE7C);
+				if(IdleSeconds >= FLYSECONDS_MAX*2)
+				{
+					twoTone(NOTE7C);
+				}
 			}
 		}
 	}
@@ -376,7 +378,7 @@ void fastLoop(void) {
 			outch[2] = pitchV;
 			outch[3] = ruddV;
 			outch[4] = auxSwitch?SPEKTRUM_min:SPEKTRUM_max; //aux1;
-			outch[5] = bindSwitch?SPEKTRUM_min:SPEKTRUM_max; //aux2;
+			outch[5] = rateSwitch?SPEKTRUM_min:SPEKTRUM_max; //aux2;
 		}
 		
 		

@@ -47,17 +47,24 @@ void sticksGetRaw(uint16_t* _pChannels)
 	_pChannels[1] += ADCgetCh(5);    // select chan 5 Aileron
 }
 
+#define CHEATVALUE 2 // original 0
+
 void sticksProcessRaw(uint16_t* _pChannels)
 {
 	for(uint8_t i=0;i<4;i++)
 	{
-		_pChannels[i] /= (OVERSAMPLE-1);
+		_pChannels[i] /= (OVERSAMPLE-CHEATVALUE);
 	}
 
 	for(uint8_t i=0;i<4;i++)
 	{
 		_pChannels[i] +=SPEKTRUM_med;
 		_pChannels[i] -=stickCenter[i];
+		
+/*		if(_pChannels[i] > SPEKTRUM_max) 
+			_pChannels[i] = SPEKTRUM_max;
+		if(_pChannels[i] < SPEKTRUM_min) 
+			_pChannels[i] = SPEKTRUM_min;*/
 	}
 }
 
@@ -93,10 +100,10 @@ void stickCalibrate(void)
 		_delay_ms(2);
 		sticksGetRaw(stickCenter);
 	}
-	stickCenter[0]/=OVERSAMPLE;
-	stickCenter[1]/=OVERSAMPLE;
-	stickCenter[2]/=OVERSAMPLE;
-	stickCenter[3]/=OVERSAMPLE;
+	stickCenter[0]/=(OVERSAMPLE-CHEATVALUE);
+	stickCenter[1]/=(OVERSAMPLE-CHEATVALUE);
+	stickCenter[2]/=(OVERSAMPLE-CHEATVALUE);
+	stickCenter[3]/=(OVERSAMPLE-CHEATVALUE);
 	
 	eeprom_update_block(stickCenter,(void*)0,sizeof(stickCenter));
 	

@@ -13,21 +13,21 @@
 #include "music.h"
 #include "spektrum-tx.h"
 
-uint16_t stickCenter[4],stickGain[4];
+int16_t stickCenter[4];//,stickGain[4];
 
 void stickInit(void)
 {
 	eeprom_read_block(stickCenter,(void*)0,sizeof(stickCenter));
-	eeprom_read_block(stickGain,(void*)sizeof(stickCenter),sizeof(stickCenter));
+	//eeprom_read_block(stickGain,(void*)sizeof(stickCenter),sizeof(stickCenter));
 	
-	if(stickCenter[0]== 0xffff || stickCenter[0]== 0x0000)
+	if(stickCenter[0]== (signed) 0xffff || stickCenter[0]==(signed) 0x0000)
 	{
 		stickCalibrate(); // force calibration
 	}
 
 }
 
-uint16_t ADCgetCh(uint8_t ch)
+uint16_t stickADCgetCh(uint8_t ch)
 {
 	// Get stick inputs
 	uint8_t mux = 0x40 | ch;
@@ -36,35 +36,52 @@ uint16_t ADCgetCh(uint8_t ch)
 	ADCSRA |= 0x40; // start
 	while(ADCSRA & 0x40); // wait for completion
 	return ADC;
-};
-
-void sticksGetRaw(uint16_t* _pChannels)
-{
-	// Get stick inputs
-	_pChannels[0] += ADCgetCh(7);	// select chan 7 Throttle // fixme define mode 1/2
-	_pChannels[3] += ADCgetCh(3);	// select chan 3 Rudder
-	_pChannels[2] += ADCgetCh(4);	// select chan 4 Elevator
-	_pChannels[1] += ADCgetCh(5);    // select chan 5 Aileron
 }
 
-#define CHEATVALUE 2 // original 0
+void stickGetRawADC(int16_t* _pChannels)
+{
+	// Get stick inputs
+	_pChannels[0] += stickADCgetCh(7);	// select chan 7 Throttle // fixme define mode 1/2
+	_pChannels[3] += stickADCgetCh(3);	// select chan 3 Rudder
+	_pChannels[2] += stickADCgetCh(4);	// select chan 4 Elevator
+	_pChannels[1] += stickADCgetCh(5);    // select chan 5 Aileron
+}
 
-void sticksProcessRaw(uint16_t* _pChannels)
+#define GAIN 1550
+
+int16_t ScaleStick(int16_t ch)
+{
+	volatile int32_t a = ch;
+	volatile int32_t b;
+	int16_t r = 0;
+	
+	b = a*GAIN;
+	a = b/1000;
+	r = a;
+
+	return r;
+}
+
+int16_t stickLimit(int16_t b)
+{
+		if(b < 0) return 0;
+		if(b > 1023) return 1023;
+		return b;
+}
+
+void sticksProcessRaw(int16_t* _pChannels)
 {
 	for(uint8_t i=0;i<4;i++)
 	{
-		_pChannels[i] /= (OVERSAMPLE-CHEATVALUE);
-	}
+		int16_t c = _pChannels[i] / OVERSAMPLE;
+		_pChannels[i] = ScaleStick(c);
 
-	for(uint8_t i=0;i<4;i++)
-	{
+		// compensate for center offset
 		_pChannels[i] +=SPEKTRUM_med;
 		_pChannels[i] -=stickCenter[i];
-		
-/*		if(_pChannels[i] > SPEKTRUM_max) 
-			_pChannels[i] = SPEKTRUM_max;
-		if(_pChannels[i] < SPEKTRUM_min) 
-			_pChannels[i] = SPEKTRUM_min;*/
+
+		// limit for next step
+		_pChannels[i] = stickLimit(_pChannels[i]);
 	}
 }
 
@@ -90,6 +107,7 @@ void stickCalibrate(void)
 	}
 	
 	LEDOff();
+	// simulate normal acquisition loop
 	stickCenter[0]=0;
 	stickCenter[1]=0;
 	stickCenter[2]=0;
@@ -98,12 +116,14 @@ void stickCalibrate(void)
 	for(i=0;i<OVERSAMPLE;i++)
 	{
 		_delay_ms(2);
-		sticksGetRaw(stickCenter);
+		stickGetRawADC(stickCenter);
 	}
-	stickCenter[0]/=(OVERSAMPLE-CHEATVALUE);
-	stickCenter[1]/=(OVERSAMPLE-CHEATVALUE);
-	stickCenter[2]/=(OVERSAMPLE-CHEATVALUE);
-	stickCenter[3]/=(OVERSAMPLE-CHEATVALUE);
+	
+	for(uint8_t i=0;i<4;i++)
+	{
+		int16_t c = stickCenter[i] / OVERSAMPLE;
+		stickCenter[i] = ScaleStick(c);
+	}
 	
 	eeprom_update_block(stickCenter,(void*)0,sizeof(stickCenter));
 	
@@ -113,3 +133,4 @@ void stickCalibrate(void)
 // 		
 // 	}
 }
+

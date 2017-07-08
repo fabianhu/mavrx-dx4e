@@ -13,8 +13,8 @@
 uint16_t ADCgetCh(uint8_t ch);
 
 
-void sticksGetRaw(uint16_t* _pChannels);
-void sticksProcessRaw(uint16_t* _pChannels);
+void stickGetRawADC(int16_t* _pChannels);
+void sticksProcessRaw(int16_t* _pChannels);
 void stickCalibrate(void);
 uint16_t stickScale(uint16_t);
 void stickInit(void);

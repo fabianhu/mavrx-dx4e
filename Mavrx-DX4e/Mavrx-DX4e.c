@@ -82,7 +82,7 @@ typedef enum
 
 transmitMode_t transmitMode = eTM_normal;
 
-uint16_t rawstickvalues[4]; // the raw stick values
+int16_t rawstickvalues[4]; // the raw stick values
 
 extern uint8_t noteBuffer[20];
 extern uint8_t noteCounter;
@@ -164,7 +164,7 @@ int main(void) {
 		
 		// should be going at about 625Hz
 		getDigital();
-		sticksGetRaw(rawstickvalues);
+		stickGetRawADC(rawstickvalues);
 		
 	
 		if(++fastScaler >= OVERSAMPLE) //should be 22ms for DSMX (Nano Board can not handle it faster!!)
@@ -195,7 +195,7 @@ int main(void) {
 			// every second
 			secondScaler=0;
 			IdleSeconds++;
-			if(auxSwitch)
+			if(auxSwitch && mixToggle)
 			{	
 				FlySeconds++;
 					
@@ -348,10 +348,10 @@ void fastLoop(void) {
 	
 	sticksProcessRaw(rawstickvalues); //no more raw after that
 	
-	uint16_t elevV = rawstickvalues[0];
-	uint16_t aileV = 0x3ff - (rawstickvalues[1]); // fixme insert reverse here?
-	uint16_t pitchV = rawstickvalues[2];
-	uint16_t ruddV = 0x3ff - (rawstickvalues[3]);
+	uint16_t elevV = (uint16_t)rawstickvalues[0];
+	uint16_t aileV = 0x3ff - (uint16_t)rawstickvalues[1]; // fixme insert reverse here?
+	uint16_t pitchV = (uint16_t)rawstickvalues[2];
+	uint16_t ruddV = 0x3ff - (uint16_t)rawstickvalues[3];
 	
 	switch(transmitMode) {
 		case eTM_trainer_master: // in trainer master mode

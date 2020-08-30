@@ -1,0 +1,561 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                              StickInput.o (__mulsi3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+                              Mavrx-DX4e.o (__udivmodqi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                              StickInput.o (__divmodhi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+                              StickInput.o (__divmodsi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              Mavrx-DX4e.o (__do_copy_data)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              Mavrx-DX4e.o (__do_clear_bss)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o) (__udivmodhi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o) (__udivmodsi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega168.o)
+                              StickInput.o (__eerd_block_m168)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_block_atmega168.o)
+                              StickInput.o (__eeupd_block_m168)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_byte_atmega168.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_block_atmega168.o) (__eeupd_r18_m168)
+
+Allocating common symbols
+Common symbol       size              file
+
+mixToggle           0x1               Mavrx-DX4e.o
+rateSwitch          0x1               Mavrx-DX4e.o
+mute                0x1               music.o
+elevToggle          0x1               Mavrx-DX4e.o
+bindSwitch          0x1               Mavrx-DX4e.o
+ruddToggle          0x1               Mavrx-DX4e.o
+aileToggle          0x1               Mavrx-DX4e.o
+rawstickvalues      0x8               Mavrx-DX4e.o
+battPulse           0x1               Mavrx-DX4e.o
+mdToggle            0x1               Mavrx-DX4e.o
+auxSwitch           0x1               Mavrx-DX4e.o
+trainerPlugged      0x1               Mavrx-DX4e.o
+stickCenter         0x8               StickInput.o
+noteCounter         0x1               music.o
+noteBuffer          0x14              music.o
+noteInterruptable   0x1               music.o
+throToggle          0x1               Mavrx-DX4e.o
+toggleCounter       0x1               Mavrx-DX4e.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+LOAD main.o
+LOAD Mavrx-DX4e.o
+LOAD music.o
+LOAD spektrum-tx.o
+LOAD StickInput.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x1c12
+ *(.vectors)
+ .vectors       0x00000000       0x68 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000068                . = ALIGN (0x2)
+                0x00000068                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000068        0x0 linker stubs
+ *(.trampolines*)
+                0x00000068                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000068                __ctors_start = .
+ *(.ctors)
+                0x00000068                __ctors_end = .
+                0x00000068                __dtors_start = .
+ *(.dtors)
+                0x00000068                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000068        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+                0x00000068                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000068        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000074       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000074                __do_copy_data
+ .init4         0x0000008a       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x0000008a                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000009a        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+ *(.init9)
+ *(.text)
+ .text          0x000000a2        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+                0x000000a2                __vector_22
+                0x000000a2                __vector_1
+                0x000000a2                __vector_24
+                0x000000a2                __vector_12
+                0x000000a2                __bad_interrupt
+                0x000000a2                __vector_6
+                0x000000a2                __vector_3
+                0x000000a2                __vector_23
+                0x000000a2                __vector_25
+                0x000000a2                __vector_11
+                0x000000a2                __vector_13
+                0x000000a2                __vector_17
+                0x000000a2                __vector_19
+                0x000000a2                __vector_7
+                0x000000a2                __vector_5
+                0x000000a2                __vector_4
+                0x000000a2                __vector_9
+                0x000000a2                __vector_2
+                0x000000a2                __vector_21
+                0x000000a2                __vector_15
+                0x000000a2                __vector_8
+                0x000000a2                __vector_14
+                0x000000a2                __vector_10
+                0x000000a2                __vector_16
+                0x000000a2                __vector_18
+                0x000000a2                __vector_20
+ .text          0x000000a6        0x0 main.o
+ .text          0x000000a6      0x886 Mavrx-DX4e.o
+                0x00000252                fastLoop
+                0x000000b0                slowLoop
+                0x000004d8                getDigital
+                0x000000a6                LEDOff
+                0x00000726                main
+ .text          0x0000092c      0xe2c music.o
+                0x0000095a                oneTone
+                0x00000978                playNote
+                0x0000099e                paschaOvo
+                0x00000934                twoTone
+                0x0000092c                stopNote
+ .text          0x00001758       0xce spektrum-tx.o
+                0x00001758                spektrumInit
+                0x00001770                spektrumSend
+ .text          0x00001826      0x266 StickInput.o
+                0x00001932                stickLimit
+                0x00001850                stickGetRawADC
+                0x000019b0                stickCalibrate
+                0x00001a68                stickInit
+                0x000018b6                ScaleStick
+                0x0000194c                sticksProcessRaw
+                0x00001826                stickADCgetCh
+ .text          0x00001a8c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .text          0x00001a8c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+ .text          0x00001a8c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .text          0x00001a8c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+ .text          0x00001a8c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00001a8c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x00001a8c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00001a8c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .text          0x00001a8c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .text          0x00001a8c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega168.o)
+ .text          0x00001a8c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_block_atmega168.o)
+ .text          0x00001a8c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_byte_atmega168.o)
+                0x00001a8c                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x00001a8c       0x3e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x00001a8c                __mulsi3
+ .text.libgcc   0x00001aca       0x18 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+                0x00001aca                __udivmodqi4
+ .text.libgcc   0x00001ae2       0x26 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                0x00001ae2                __divmodhi4
+                0x00001ae2                _div
+ .text.libgcc   0x00001b08       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+                0x00001b08                __divmodsi4
+ .text.libgcc   0x00001b3e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00001b3e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00001b3e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00001b3e       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00001b3e                __udivmodhi4
+ .text.libgcc   0x00001b66       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00001b66                __udivmodsi4
+ .text.avr-libc
+                0x00001baa       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega168.o)
+                0x00001bae                __eerd_blraw_m168
+                0x00001baa                __eerd_block_m168
+ .text.avr-libc
+                0x00001bca       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_block_atmega168.o)
+                0x00001bca                __eeupd_block_m168
+ .text.avr-libc
+                0x00001bea       0x24 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_byte_atmega168.o)
+                0x00001bec                __eeupd_r18_m168
+                0x00001bea                __eeupd_byte_m168
+                0x00001c0e                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00001c0e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00001c0e                exit
+                0x00001c0e                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00001c0e        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00001c12                _etext = .
+
+.data           0x00800100        0xe load address 0x00001c12
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+ .data          0x00800100        0x0 main.o
+ .data          0x00800100        0xe Mavrx-DX4e.o
+ .data          0x0080010e        0x0 music.o
+ .data          0x0080010e        0x0 spektrum-tx.o
+ .data          0x0080010e        0x0 StickInput.o
+ .data          0x0080010e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .data          0x0080010e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+ .data          0x0080010e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .data          0x0080010e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+ .data          0x0080010e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x0080010e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x0080010e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x0080010e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x0080010e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x0080010e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega168.o)
+ .data          0x0080010e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_block_atmega168.o)
+ .data          0x0080010e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_byte_atmega168.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0080010e                . = ALIGN (0x2)
+                0x0080010e                _edata = .
+                0x0080010e                PROVIDE (__data_end, .)
+
+.bss            0x0080010e       0x55
+                0x0080010e                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080010e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+ .bss           0x0080010e        0x0 main.o
+ .bss           0x0080010e        0xe Mavrx-DX4e.o
+                0x0080010f                LED1Duty
+                0x00800111                LED3Duty
+                0x00800114                IdleSeconds
+                0x00800117                transmitMode
+                0x00800116                KillEngine
+                0x0080010e                LED0Duty
+                0x00800110                LED2Duty
+                0x00800112                FlySeconds
+ .bss           0x0080011c        0x0 music.o
+ .bss           0x0080011c       0x14 spektrum-tx.o
+ .bss           0x00800130        0x0 StickInput.o
+ .bss           0x00800130        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .bss           0x00800130        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+ .bss           0x00800130        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .bss           0x00800130        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+ .bss           0x00800130        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800130        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800130        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00800130        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x00800130        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x00800130        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega168.o)
+ .bss           0x00800130        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_block_atmega168.o)
+ .bss           0x00800130        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_byte_atmega168.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00800130       0x14 Mavrx-DX4e.o
+                0x00800130                mixToggle
+                0x00800131                rateSwitch
+                0x00800132                elevToggle
+                0x00800133                bindSwitch
+                0x00800134                ruddToggle
+                0x00800135                aileToggle
+                0x00800136                rawstickvalues
+                0x0080013e                battPulse
+                0x0080013f                mdToggle
+                0x00800140                auxSwitch
+                0x00800141                trainerPlugged
+                0x00800142                throToggle
+                0x00800143                toggleCounter
+ COMMON         0x00800144       0x17 music.o
+                0x00800144                mute
+                0x00800145                noteCounter
+                0x00800146                noteBuffer
+                0x0080015a                noteInterruptable
+ COMMON         0x0080015b        0x8 StickInput.o
+                0x0080015b                stickCenter
+                0x00800163                PROVIDE (__bss_end, .)
+                0x00001c12                __data_load_start = LOADADDR (.data)
+                0x00001c20                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800163        0x0
+                0x00800163                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800163                PROVIDE (__noinit_end, .)
+                0x00800163                _end = .
+                0x00800163                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x80
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 Mavrx-DX4e.o
+ .debug_aranges
+                0x00000020       0x20 music.o
+ .debug_aranges
+                0x00000040       0x20 spektrum-tx.o
+ .debug_aranges
+                0x00000060       0x20 StickInput.o
+
+.debug_pubnames
+                0x00000000      0x2ea
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x18b Mavrx-DX4e.o
+ .debug_pubnames
+                0x0000018b       0x90 music.o
+ .debug_pubnames
+                0x0000021b       0x34 spektrum-tx.o
+ .debug_pubnames
+                0x0000024f       0x9b StickInput.o
+
+.debug_info     0x00000000     0x41d6
+ *(.debug_info)
+ .debug_info    0x00000000       0x5e main.o
+ .debug_info    0x0000005e      0x4ba Mavrx-DX4e.o
+ .debug_info    0x00000518     0x37e8 music.o
+ .debug_info    0x00003d00      0x129 spektrum-tx.o
+ .debug_info    0x00003e29      0x3ad StickInput.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x56b
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x2a main.o
+ .debug_abbrev  0x0000002a      0x12b Mavrx-DX4e.o
+ .debug_abbrev  0x00000155      0x181 music.o
+ .debug_abbrev  0x000002d6       0xca spektrum-tx.o
+ .debug_abbrev  0x000003a0      0x1cb StickInput.o
+
+.debug_line     0x00000000     0x2b51
+ *(.debug_line)
+ .debug_line    0x00000000       0x3e main.o
+ .debug_line    0x0000003e      0x8e3 Mavrx-DX4e.o
+ .debug_line    0x00000921     0x1dd2 music.o
+ .debug_line    0x000026f3      0x193 spektrum-tx.o
+ .debug_line    0x00002886      0x2cb StickInput.o
+
+.debug_frame    0x00000000      0x170
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x60 Mavrx-DX4e.o
+ .debug_frame   0x00000060       0x60 music.o
+ .debug_frame   0x000000c0       0x30 spektrum-tx.o
+ .debug_frame   0x000000f0       0x80 StickInput.o
+
+.debug_str      0x00000000      0x485
+ *(.debug_str)
+ .debug_str     0x00000000       0x68 main.o
+                                 0x9c (size before relaxing)
+ .debug_str     0x00000068      0x2a6 Mavrx-DX4e.o
+                                0x340 (size before relaxing)
+ .debug_str     0x0000030e       0x76 music.o
+                                0x147 (size before relaxing)
+ .debug_str     0x00000384       0x58 spektrum-tx.o
+                                0x100 (size before relaxing)
+ .debug_str     0x000003dc       0xa9 StickInput.o
+                                0x18e (size before relaxing)
+
+.debug_loc      0x00000000     0x21c1
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x134 Mavrx-DX4e.o
+ .debug_loc     0x00000134     0x1ef2 music.o
+ .debug_loc     0x00002026       0x18 spektrum-tx.o
+ .debug_loc     0x0000203e      0x183 StickInput.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(Mavrx-DX4e.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000       0xd8
+ .debug_ranges  0x00000000       0x90 music.o
+ .debug_ranges  0x00000090       0x48 StickInput.o

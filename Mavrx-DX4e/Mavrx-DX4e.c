@@ -348,10 +348,10 @@ void fastLoop(void) {
 	
 	sticksProcessRaw(rawstickvalues); //no more raw after that
 	
-	uint16_t elevV = (uint16_t)rawstickvalues[0];
-	uint16_t aileV = 0x3ff - (uint16_t)rawstickvalues[1]; // fixme insert reverse here?
-	uint16_t pitchV = (uint16_t)rawstickvalues[2];
-	uint16_t ruddV = 0x3ff - (uint16_t)rawstickvalues[3];
+	uint16_t elevV = elevToggle ? 0x3ff - (uint16_t)rawstickvalues[0] : (uint16_t)rawstickvalues[0];
+	uint16_t aileV = aileToggle ? 0x3ff - (uint16_t)rawstickvalues[1] : (uint16_t)rawstickvalues[1];
+	uint16_t pitchV = throToggle ? 0x3ff - (uint16_t)rawstickvalues[2] : (uint16_t)rawstickvalues[2];
+	uint16_t ruddV = ruddToggle ? 0x3ff - (uint16_t)rawstickvalues[3] : (uint16_t)rawstickvalues[3];
 	
 	switch(transmitMode) {
 		case eTM_trainer_master: // in trainer master mode
